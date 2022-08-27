@@ -108,8 +108,8 @@ async def next_page(bot, query):
             )
     btn.insert(0,
             [
-                InlineKeyboardButton("⚡ Movie Updates ", url="https://t.me/gujjubhai"),
-                InlineKeyboardButton("Bot Updates ⚡", url="https://t.me/gujjubhai")
+                InlineKeyboardButton("⚡ Movie Updates ", url="https://t.me/+03E4J2ogqsFjNjBl"),
+                InlineKeyboardButton("Bot Updates ⚡", url="https://t.me/+03E4J2ogqsFjNjBl")
             ],
         )
     try:
@@ -411,8 +411,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('♻️ Add Me To Your Groups ♻️', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('🎯 Movie Group 🎯', url='https://t.me/gujjubhai'),
-            InlineKeyboardButton('⚡ Updates Channel⚡', url='https://t.me/gujjubhai')
+            InlineKeyboardButton('🎯 Movie Group 🎯', url='https://t.me/+03E4J2ogqsFjNjBl'),
+            InlineKeyboardButton('⚡ Updates Channel⚡', url='https://t.me/+03E4J2ogqsFjNjBl')
             ],[
             InlineKeyboardButton('💯 Share Our Bot 💯', url='https://t.me/share/url?url=gujjubhai%20Media%20Search%20Bot%20%E2%9A%A1%0A%0A%E2%9C%85%20Faster%20And%20Efficient%20%F0%9F%8F%8D%EF%B8%8F%F0%9F%92%A8%0A%E2%9C%85%20Work%20In%20Group%20For%20Free%20%F0%9F%A4%A9%0A%E2%9C%85%20Highly%20Accurate%20Results%20%F0%9F%98%97%0A%E2%9C%85%20Also%20some%20Other%20feature%20%F0%9F%A4%9F%F0%9F%8F%BD%0A%0AAdd%20Me%20As%20Admin%20In%20Any%20Group%20To%20Search%20For%20Movies%20%F0%9F%8D%BF%0A%0A%E2%94%8F%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%93%0A%20%20%20%20%20%40GujjubhaiMovies_bot%E2%9A%A1%0A%E2%94%97%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%81%E2%94%9B')
         ], [
@@ -447,7 +447,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('⚡ Updates Channel ⚡', url='https://t.me/gujjubhai'),
+            InlineKeyboardButton('⚡ Updates Channel ⚡', url='https://t.me/+03E4J2ogqsFjNjBl'),
             InlineKeyboardButton('Info', callback_data='source')
         ], [
             InlineKeyboardButton('🏠 Home', callback_data='start'),
@@ -684,8 +684,8 @@ async def auto_filter(client, msg, spoll=False):
         )
 
     btn.insert(0, [
-        InlineKeyboardButton("⚡ Movie Updates", url="https://t.me/gujjubhai"),
-        InlineKeyboardButton("Bot Updates ⚡", url="https://t.me/gujjubhai")]
+        InlineKeyboardButton("⚡ Movie Updates", url="https://t.me/+03E4J2ogqsFjNjBl"),
+        InlineKeyboardButton("Bot Updates ⚡", url="https://t.me/+03E4J2ogqsFjNjBl")]
         )
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
@@ -722,7 +722,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>Hey {message.from_user.mention}</b>👋🏻\n<b>🔍 Here is Your Query Result</b>: <code>{search}</code>\n<b>© Powered by</b>: <b><a href=https://t.me/gujjubhai>{message.chat.title}</a></b>\nㅤㅤㅤㅤ\n<b><i>⚠️ This message will be Auto-deleted after 20 Minute to avoid copyright issues.</b></i>"
+        cap = f"<b>Hey {message.from_user.mention}</b>👋🏻\n<b>🔍 Here is Your Query Result</b>: <code>{search}</code>\n<b>© Powered by</b>: <b><a href=https://t.me/+03E4J2ogqsFjNjBl>{message.chat.title}</a></b>\nㅤㅤㅤㅤ\n<b><i>⚠️ This message will be Auto-deleted after 20 Minute to avoid copyright issues.</b></i>"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
